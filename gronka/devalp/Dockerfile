@@ -21,10 +21,12 @@ RUN curl -fsS http://code.dlang.org/files/dub-1.0.0-linux-x86_64.tar.gz | tar xf
 
 #RUN addgroup devgroup
 #RUN adduser -D -G devgroup taylor
-RUN mkdir /replica
+RUN mkdir /dock
 #RUN chown -R taylor:devgroup /replica
 EXPOSE 9090/tcp
 
 #RUN apk add  gawk sed grep bc coreutils
 RUN rm -rf /var/cache/apk/*
 #RUN ldconfig
+
+CMD /dock/dock.sh
