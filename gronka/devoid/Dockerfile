@@ -14,7 +14,7 @@ RUN curl -fsS http://code.dlang.org/files/dub-1.0.0-linux-x86_64.tar.gz | tar xf
 RUN wget http://downloads.dlang.org/releases/2.x/2.071.2/dmd.2.071.2.linux.tar.xz
 RUN tar xvf dmd.2.071.2.linux.tar.xz
 ENV PATH "$PATH:/dmd2/linux/bin64"
-ENV LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/dmd2/linux/bin64"
+ENV LD_LIBRARY_PATH "$LD_LIBRARY_PATH:/dmd2/linux/lib64"
 
 # wt I think
 #RUN apk add doxygen 
